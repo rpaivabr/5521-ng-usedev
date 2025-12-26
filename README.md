@@ -1,59 +1,55 @@
-# NgUsedev
+![](thumbnail.png)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+# UseDev - E-commerce de produtos geeks 
 
-## Development server
+Um projeto prático desenvolvido passo a passo para quem já tem o básico de Angular e quer evoluir para construir aplicações mais organizadas, escaláveis e com experiência moderna. Ao longo do curso, criamos um app de ecommerce para selecionar produtos, navegar entre páginas de lista, detalhe e carrinho e aprimorar a comunicação e estado entre componentes, serviços e rotas.
 
-To start a local development server, run:
+## 🔨 Funcionalidades do projeto
 
-```bash
-ng serve
-```
+* Exibição de lista de produtos
+* Navegação entre lista, detalhe e carrinho
+* Adicionar e remover itens do carrinho
+* Manter o header atualizado com o total de items no carrinho
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![](screen-capture.png)
 
-## Code scaffolding
+## ✔️ Técnicas e tecnologias utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O desenvolvimento do projeto aborda as seguintes técnicas e tecnologias:
 
-```bash
-ng generate component component-name
-```
+* **Signal, Computed e Effect**: Gerenciamento de estado e persistência no localStorage
+* **Binding e Control Flow**: Para trazer dinamismo aos templates
+* **Componentização**: Componentes reutilizáveis, componentes de layout e páginas, e como organizar sua estrutura em pastas/hierarquia visual
+* **Input/Output**: Como o componente recebe dados e envia eventos entre pai/filho
+* **Services**: Serviço global para armazenar lista de produtos e compartilhar estado do carrinho
+* **Persistência local com localStorage**: Salva o carrinho mesmo recarregando a página
+* **Boas práticas de organização de código**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Como rodar o projeto
 
-```bash
-ng generate --help
-```
+Após baixar o projeto, siga os passos abaixo para executar localmente:
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+1. Certifique-se de que você já tem Node.js instalado, versão v22.12.0 ou acima ([guia oficial](https://nodejs.org/en/download/))
+2. Certifique-se de que você já tem o Angular CLI instalado, versão v21.0.6 ou acima ([guia oficial](https://angular.dev/installation)), a instalação é feita no terminal:
 
 ```bash
-ng test
+npm install -g @angular/cli
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+3. No terminal ainda, navegue até a pasta do projeto e instale as dependências:
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Execute o projeto:
 
-## Additional Resources
+```bash
+npm start
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Acesse no navegador: [http://localhost:4200](http://localhost:4200)
+
+## 📚 Mais informações do curso
+
+Curtiu o projeto e quer aprender na prática? O passo a passo completo faz parte do segundo curso da carreira Angular da Alura (Nível 1)

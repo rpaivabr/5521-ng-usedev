@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 39px;
+  font-weight: 700;
+  color: #090129;
+  margin: 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* app.css */
+main {
+  margin: 0 60px;
+}
+
+/* card-list.css */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+/* product-card.css */
+.product-card {
+  width: 100%;
+  box-shadow: 0px 4px 24px 0px #780bf71f;
+}
+
+.product-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.product-info {
+  background-color: #efefef;
+  color: #090129;
+  height: 125px;
+  padding: 16px 24px;
+}
+
+.product-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.product-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 31px;
+  font-weight: 600;
+}
+
+/* banner.css */
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+/* header.css */
+header {
+  height: 112px;
+  padding: 24px 60px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header .logo {
+  height: 48px;
+}
+
+header .search {
+  height: 64px;
+  width: 648px;
+  background-color: #efefef;
+  border: none;
+  border-radius: 48px;
+  padding: 0 24px;
+  font-size: 20px;
+}
+
+header .search::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #090129;
+}
+
+
+/* footer.css */
+footer {
+  width: 100%;
+  height: 260px;
+  padding: 60px;
+  background-color: #090129;
+}
+
+footer .slogan {
+  color: #8FFF24;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
