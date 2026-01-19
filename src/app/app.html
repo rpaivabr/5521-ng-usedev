@@ -1,39 +1,5 @@
-<header>
-  <div class="container">
-    <img src="images/logo.svg" alt="Logo UseDev" />
-    <div class="cart">
-      <img src="images/shopping_cart.svg" alt="Ícone carrinho de compras" />
-      @if (totalCartItems() > 0) {
-        <span class="badge">{{ totalCartItems() }}</span>
-      }
-    </div>
-  </div>
-</header>
-
-<img src="images/banner.png" class="banner" alt="Imagem banner" />
-
-<main>
-  <div class="container">
-    <h2>Promos especiais</h2>
-
-    <div class="product-list">
-      @for (product of products(); track product.id) {
-        <div class="product-card" (click)="addToCart()">
-          <img class="product-image" [src]="product.imageUrl" alt="Foto do produto Camiseta Capy" />
-          <div class="product-info">
-            <div class="product-name">{{ product.name }}</div>
-            <div class="product-price">R$ {{ product.price }}</div>
-          </div>
-        </div>
-      }
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    <img src="images/logo-green.svg" alt="Logo UseDev Verde" />
-    <div class="slogan">Hora de abraçar seu lado geek!</div>
-  </div>
-</footer>
+<app-header />
+<app-banner />
+<app-product-list />
+<app-footer />
 

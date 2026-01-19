@@ -1,0 +1,34 @@
+header {
+  height: 112px;
+}
+
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 480px) {
+    padding: 0 60px;
+  }
+}
+
+header .cart {
+  position: relative;
+}
+
+header .badge {
+  background-color: #8FFF24;
+  color: #090129;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  padding-top: 1px;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  bottom: 20px;
+}

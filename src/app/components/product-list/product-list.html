@@ -1,0 +1,17 @@
+<main>
+  <div class="container">
+    <h2>Promos especiais</h2>
+
+    <div class="product-list">
+      @for (product of products(); track product.id) {
+        <div class="product-card">
+          <img class="product-image" [src]="product.imageUrl" alt="Foto do produto Camiseta Capy" />
+          <div class="product-info">
+            <div class="product-name">{{ product.name }}</div>
+            <div class="product-price">R$ {{ product.price }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</main>
