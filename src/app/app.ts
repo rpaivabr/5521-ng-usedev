@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { Footer } from "./components/footer/footer";
 import { Banner } from './components/banner/banner';
 import { ProductList } from './components/product-list/product-list';
+import { Product, products } from './product';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,13 @@ import { ProductList } from './components/product-list/product-list';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  products = signal<Product[]>(products);
+  cart = signal<Product[]>([]);
+  totalCartItems = computed(() => this.cart().length);
+
+  addToCart(product: Product): void {
+    this.cart.update(items => [...items, product]);
+    console.log("Carrinho: ", this.cart());
+  }
+}
