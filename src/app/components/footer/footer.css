@@ -1,0 +1,18 @@
+footer {
+  background-color: #090129;
+  padding: 60px 0;
+}
+
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+
+footer .slogan {
+  color: #8FFF24;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
