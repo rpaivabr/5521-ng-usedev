@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Product } from '../../product';
 
 @Component({
@@ -9,4 +9,5 @@ import { Product } from '../../product';
 })
 export class ProductCard {
   product = input.required<Product>()
+  addToCart = output<void>()
 }
