@@ -1,5 +1,5 @@
-import { Component, inject, input, output, signal } from '@angular/core';
-import { Product, products } from '../../product';
+import { Component, inject, output } from '@angular/core';
+import { Product } from '../../product';
 import { ProductCard } from '../product-card/product-card';
 import { ProductData } from '../../services/product-data';
 
@@ -10,7 +10,6 @@ import { ProductData } from '../../services/product-data';
   styleUrl: './product-list.css',
 })
 export class ProductList {
-  // products = input.required<Product[]>();
   private productData = inject(ProductData);
   products = this.productData.getProducts();
   addToCart = output<Product>();
