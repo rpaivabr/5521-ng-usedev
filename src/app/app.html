@@ -1,4 +1,4 @@
 <app-header [cartItemsCount]="cartItemsCount()" />
 <app-banner />
-<app-product-list [products]="products()" (addToCart)="addToCart($event)" />
+<app-product-list (addToCart)="addToCart($event)" />
 <app-footer />
