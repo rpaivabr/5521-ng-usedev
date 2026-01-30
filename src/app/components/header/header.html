@@ -3,9 +3,7 @@
     <img src="images/logo.svg" alt="Logo UseDev" />
     <div class="cart">
       <img src="images/shopping_cart.svg" alt="Ícone carrinho de compras" />
-      @if (totalCartItems() > 0) {
-        <span class="badge">{{ totalCartItems() }}</span>
-      }
+      <span class="badge">{{cartItemsCount()}}</span>
     </div>
   </div>
 </header>

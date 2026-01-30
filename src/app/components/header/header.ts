@@ -7,5 +7,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-  totalCartItems = input(0);
+  cartItemsCount = input(0);
 }

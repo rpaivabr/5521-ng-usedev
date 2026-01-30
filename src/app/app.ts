@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { Footer } from "./components/footer/footer";
 import { Banner } from './components/banner/banner';
@@ -12,12 +12,15 @@ import { Product, products } from './product';
   styleUrl: './app.css'
 })
 export class App {
-  products = signal<Product[]>(products);
-  cart = signal<Product[]>([]);
-  totalCartItems = computed(() => this.cart().length);
+   products = signal<Product[]>(products);
+   cart = signal<Product[]>([]);
+   cartItemsCount = computed(() => this.cart().length);
 
-  addToCart(product: Product): void {
-    this.cart.update(items => [...items, product]);
-    console.log("Carrinho: ", this.cart());
-  }
+   logEffect = effect(() => {
+      console.log(this.cart());
+   })
+
+   addToCart(product: Product): void {
+     this.cart.update(items => [...items, product]);
+   }
 }
