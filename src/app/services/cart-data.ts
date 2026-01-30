@@ -1,4 +1,4 @@
-import { effect, Injectable, signal } from '@angular/core';
+import { computed, effect, Injectable, signal } from '@angular/core';
 import { CartItem } from '../cart';
 import { Product } from '../product';
 
@@ -7,8 +7,11 @@ import { Product } from '../product';
 })
 export class CartData {
   private cart = signal<CartItem<Product>[]>([]);
+  cartItemsCount = computed(
+    () => this.cart().reduce((sum, cartItem) => sum + cartItem.quantity, 0)
+  );
 
-  logEffect = effect(() => {
+  private logEffect = effect(() => {
     console.log(this.cart());
   })
 

@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CartData } from '../../services/cart-data';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-  cartItemsCount = input(0);
+  private cartData = inject(CartData);
+  cartItemsCount = this.cartData.cartItemsCount;
 }
