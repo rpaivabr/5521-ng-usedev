@@ -2,6 +2,7 @@ import { Component, computed, effect, inject, input } from '@angular/core';
 import { ProductData } from '../../../services/product-data';
 import { Router } from '@angular/router';
 import { CartData } from '../../../services/cart-data';
+import { Auth } from '../../../services/auth';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,6 +14,8 @@ export class ProductDetail {
   private router = inject(Router)
   private productData = inject(ProductData);
   private cartData = inject(CartData);
+  private auth = inject(Auth);
+  isLogged = this.auth.isLogged;
 
   id = input<string>();
   product = computed(() => this.productData.getProductById(Number(this.id())));

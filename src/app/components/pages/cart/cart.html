@@ -1,1 +1,46 @@
-<p>cart works!</p>
+<main>
+  <div class="container cart">
+    <h2>Carrinho de Compras</h2>
+    <div class="cart-message">Atenção, os produtos no carrinho não ficam reservados. Finalize a compra para garantir! :)</div>
+
+    <div class="cart-details">
+      <div class="cart-items">
+        @for (cartItem of cartData.cartItems(); track cartItem.item.id) {
+          <div class="cart-item">
+            <img class="cart-item-image" [src]="cartItem.item.imageUrl" alt="Imagem do produto no carrinho" />
+            <div class="cart-item-info">
+              <div class="cart-item-name">{{ cartItem.item.name }}</div>
+              <div class="cart-item-description">{{ cartItem.item.description }}</div>
+            </div>
+            <div class="cart-item-price">R$ {{ cartItem.item.price }}</div>
+            <div class="cart-item-quantity">
+              <span>Quantidade:</span>
+              <div class="cart-item-quantity-actions">
+                <img src="/images/minus.svg" (click)="cartData.minus(cartItem.item.id)" />
+                <div>{{ cartItem.quantity }}</div>
+                <img src="/images/plus.svg" (click)="cartData.plus(cartItem.item.id)" />
+              </div>
+            </div>
+            <div class="cart-item-delete">
+              <span>Excluir</span>
+              <img src="/images/delete.svg" (click)="cartData.remove(cartItem.item.id)" />
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="cart-info">
+        <div class="cart-info-row">
+          <span>{{cartData.cartItemsCount()}} produtos</span>
+        </div>
+        <hr />
+        <div class="cart-info-total">
+          <div>
+            <img src="/images/shopping_bag.svg" />Total
+          </div>
+          <span>R$ {{cartData.cartItemsTotal()}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

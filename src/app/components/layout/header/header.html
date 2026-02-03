@@ -3,13 +3,18 @@
     <a routerLink="/products">
       <img src="images/logo.svg" alt="Logo UseDev" />
     </a>
-    <div class="cart">
-      <a routerLink="/cart">
-        <img src="images/shopping_cart.svg" alt="Ícone carrinho de compras" />
-      </a>
-      @if (cartItemsCount() > 0) {
-        <span class="badge">{{cartItemsCount()}}</span>
-      }
-    </div>
+    @if (isLogged()) {
+      <div class="login" (click)="logout()">Logout</div>
+      <div class="cart">
+        <a routerLink="/cart">
+          <img src="images/shopping_cart.svg" alt="Ícone carrinho de compras" />
+        </a>
+        @if (cartItemsCount() > 0) {
+          <span class="badge">{{cartItemsCount()}}</span>
+        }
+      </div>
+    } @else {
+      <div class="login" (click)="login()">Login</div>
+    }
   </div>
 </header>
