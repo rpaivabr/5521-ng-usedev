@@ -3,8 +3,8 @@
     <h2>Promos especiais</h2>
 
     <div class="product-list">
-      @for (product of products(); track product.id) {
-        <app-product-card [product]="product" (addToCart)="addToCart.emit(product)" />
+      @for (product of products; track product.id) {
+        <app-product-card [product]="product" />
       }
     </div>
   </div>
