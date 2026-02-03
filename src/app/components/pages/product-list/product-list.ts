@@ -1,5 +1,4 @@
-import { Component, inject, output } from '@angular/core';
-import { Product } from '../../../product';
+import { Component, inject } from '@angular/core';
 import { ProductCard } from '../../product-card/product-card';
 import { ProductData } from '../../../services/product-data';
 
@@ -12,5 +11,4 @@ import { ProductData } from '../../../services/product-data';
 export class ProductList {
   private productData = inject(ProductData);
   products = this.productData.getProducts();
-  addToCart = output<Product>();
 }

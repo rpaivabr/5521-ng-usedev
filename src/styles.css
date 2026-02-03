@@ -33,52 +33,6 @@ h3 {
   padding: 0 32px;
 }
 
-.product-detail {
-  display: flex;
-  padding: 40px 0;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
-}
-
-.product-detail-image {
-  width: 645px;
-  object-fit: cover;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
-}
-
-.product-detail-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.product-detail-name {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  font-size: 39px;
-  color: #090129;
-}
-
-.product-detail-description {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  color: #090129;
-}
-
-.product-detail-price {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 31px;
-  color: #090129;
-  padding-bottom: 32px;
-}
-
 .cart {
   display: flex;
   flex-direction: column;
@@ -267,24 +221,6 @@ h3 {
   flex-direction: column;
   gap: 16px;
   padding-top: 12px;
-}
-
-.product-detail-button {
-  width: 304px;
-  height: 56px;
-  background-color: #780BF7;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 16px 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  border-radius: 32px;
-  margin-top: 32px;
 }
 
 button {

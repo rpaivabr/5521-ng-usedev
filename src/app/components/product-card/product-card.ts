@@ -1,10 +1,11 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Product } from '../../product';
 import { CartData } from '../../services/cart-data';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product-card.html',
   styleUrl: './product-card.css',
 })
