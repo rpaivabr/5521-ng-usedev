@@ -1,18 +1,13 @@
-import { Component, inject, input, output } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Product } from '../../product';
-import { CartData } from '../../services/cart-data';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product-card.html',
   styleUrl: './product-card.css',
 })
 export class ProductCard {
-  private cartData = inject(CartData);
   product = input.required<Product>()
-  
-  addToCart(product: Product) {
-    this.cartData.addToCart(product);
-  }
 }
