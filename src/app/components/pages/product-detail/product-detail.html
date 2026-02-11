@@ -1,11 +1,13 @@
 <h2>Detalhe do Produto</h2>
 
 <div class="product-detail">
-  <img class="product-detail-image" [src]="product().imageUrl" alt="Foto do produto {{product().name}}" />
+  <img class="product-detail-image" 
+    [src]="product()?.imageUrl" 
+    alt="Foto do produto {{product()?.name}}" />
   <div class="product-detail-info">
-    <div class="product-detail-name">{{product().name}}</div>
-    <div class="product-detail-description">{{product().description}}</div>
-    <div class="product-detail-price">R$ {{product().price}}</div>
+    <div class="product-detail-name">{{product()?.name}}</div>
+    <div class="product-detail-description">{{product()?.description}}</div>
+    <div class="product-detail-price">R$ {{product()?.price}}</div>
 
     <button class="product-detail-button" (click)="addToCart()">
       <img src="/images/add_shopping_cart.svg" alt="Ícone para adicionar ao carrinho" />
