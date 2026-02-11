@@ -7,13 +7,13 @@ import { Product } from '../product';
 })
 export class CartData {
   private cart = signal<CartItem<Product>[]>([]);
+  cartItems = this.cart.asReadonly();
   cartItemsCount = computed(
     () => this.cart().reduce((sum, cartItem) => sum + cartItem.quantity, 0)
   );
-
-  private logEffect = effect(() => {
-    console.log(this.cart());
-  })
+  cartItemsTotal = computed(
+    () => this.cart().reduce((sum, cartItem) => sum + cartItem.quantity * cartItem.item.price, 0)
+  );
 
   addToCart(product: Product): void {
     const itemIndexToUpdate = this.cart().findIndex(cartItem => product.id === cartItem.item.id);
@@ -26,6 +26,24 @@ export class CartData {
     const updatedCart = [...this.cart()];
     updatedCart[itemIndexToUpdate].quantity += 1;
     this.cart.set(updatedCart);
+  }
+
+  removeFromCart(product: Product): void {
+    const itemIndexToUpdate = this.cart().findIndex(cartItem => product.id === cartItem.item.id);
+
+    if (itemIndexToUpdate < 0) return;
+
+    const updatedCart = [...this.cart()];
+    updatedCart[itemIndexToUpdate].quantity -= 1;
+    this.cart.set(updatedCart.filter(cartItem => cartItem.quantity > 0));
+  }
+
+  removeAllFromCart(product: Product): void {
+    const itemIndexToUpdate = this.cart().findIndex(cartItem => product.id === cartItem.item.id);
+
+    if (itemIndexToUpdate < 0) return;
+
+    this.cart.update(cartItems => cartItems.filter(cartItem => cartItem.item.id !== product.id));
   }
 
 }
