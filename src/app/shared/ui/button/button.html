@@ -1,0 +1,9 @@
+<button 
+  [class.button-primary]="color() === 'primary'"
+  [class.button-secondary]="color() === 'secondary'"
+>
+  @if (imageSrc()) {
+    <img [src]="imageSrc()" />
+  }
+  {{text()}}
+</button>
