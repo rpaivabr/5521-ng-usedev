@@ -1,0 +1,22 @@
+<header>
+  <div class="container">
+    <a routerLink="/products">
+      <img src="images/logo.svg" alt="Logo UseDev" />
+    </a>
+    <div class="actions">
+      @if (authData.isLogged()) {
+        <div class="action" (click)="authData.logout()">Logout</div>
+        <div class="cart">
+          <a routerLink="/cart">
+            <img src="images/shopping_cart.svg" alt="Ícone carrinho de compras" />
+          </a>
+          @if (cartItemsCount() > 0) {
+            <span class="badge">{{cartItemsCount()}}</span>
+          }
+        </div>
+      } @else {
+        <div class="action" (click)="authData.login()">Login</div>
+      }
+    </div>
+  </div>
+</header>
