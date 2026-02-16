@@ -1,0 +1,20 @@
+<div class="cart-item">
+  <img [src]="cartItem().item.imageUrl" alt="Produto {{cartItem().item.name}}" class="cart-item-image" />
+  <div class="cart-item-info">
+    <div class="cart-item-name">{{cartItem().item.name}}</div>
+    <div class="cart-item-description">{{cartItem().item.description}}</div>
+  </div>
+  <div class="cart-item-price">R$ {{cartItem().item.price}}</div>
+  <div class="cart-item-quantity">
+    <span>Quantidade:</span>
+    <div class="cart-item-quantity-actions">
+      <img src="images/minus.svg" (click)="remove.emit()" />
+      <div>{{cartItem().quantity}}</div>
+      <img src="images/plus.svg" (click)="add.emit()" />
+    </div>
+  </div>
+  <div class="cart-item-delete">
+    <span>Excluir</span>
+    <img src="/images/delete.svg" (click)="removeAll.emit()" />
+  </div>
+</div>

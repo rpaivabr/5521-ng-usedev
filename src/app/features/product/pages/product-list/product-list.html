@@ -2,6 +2,6 @@
 
 <div class="product-list">
   @for (product of products; track product.id) {
-  <app-product-card [product]="product" />
+  <app-product-card [product]="product" (click)="goToDetails(product.id)" />
   }
 </div>

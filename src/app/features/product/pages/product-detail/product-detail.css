@@ -47,17 +47,5 @@
 .product-detail-button {
   width: 304px;
   height: 56px;
-  background-color: #780BF7;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 16px 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  border-radius: 32px;
   margin-top: 32px;
 }
