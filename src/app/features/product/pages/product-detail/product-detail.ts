@@ -1,8 +1,8 @@
 import { Component, computed, effect, inject, input } from '@angular/core';
-import { ProductData } from '../../../services/product-data';
-import { CartData } from '../../../services/cart-data';
 import { Router } from '@angular/router';
-import { AuthData } from '../../../services/auth-data';
+import { ProductData } from '../../../../shared/services/product-data';
+import { AuthData } from '../../../../shared/services/auth-data';
+import { CartData } from '../../../../shared/services/cart-data';
 
 @Component({
   selector: 'app-product-detail',

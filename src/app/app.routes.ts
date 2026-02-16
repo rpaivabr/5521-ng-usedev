@@ -1,9 +1,9 @@
 import { CanActivateFn, Router, Routes } from '@angular/router';
-import { ProductList } from './components/pages/product-list/product-list';
-import { ProductDetail } from './components/pages/product-detail/product-detail';
-import { Cart } from './components/pages/cart/cart';
+import { Cart } from './features/cart/cart';
 import { inject } from '@angular/core';
-import { AuthData } from './services/auth-data';
+import { AuthData } from './shared/services/auth-data';
+import { ProductList } from './features/product/pages/product-list/product-list';
+import { ProductDetail } from './features/product/pages/product-detail/product-detail';
 
 const authGuard: CanActivateFn = () => {
   const authData = inject(AuthData);
