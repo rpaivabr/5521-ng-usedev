@@ -3,10 +3,11 @@ import { Router } from '@angular/router';
 import { ProductData } from '../../../../shared/services/product-data';
 import { AuthData } from '../../../../shared/services/auth-data';
 import { CartData } from '../../../../shared/services/cart-data';
+import { Button } from '../../../../shared/ui/button/button';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [],
+  imports: [Button],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css',
 })
